@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+
+
+
+.kartya{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+table, tr, td{
+    border: 1px gainsboro solid;
+    text-align: center;
+    padding: 25px;
+}
+
+
+form{
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding: 30px;
+    font-size: 15px;
+    margin: 20px;
+}
+
+
+
+footer{
+    text-align: center;
+}
+
+nav{
+    margin: 20px;
+    font-size: 20px;
+}
+
+header h1{
+    margin: 20px;
+}
+
+
+.kartyak{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+div .header-image {
+    background-image: url(“./pics/doggy.jpg”);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    }
+
+
+header{
+    background-image: url("./pics/14710.jpg");
+    height: 100%;
+    /* Center and scale the image nicely */
+     background-position: center;
+    background-repeat: no-repeat;
+     background-size: cover;
+    padding: 20px; 
+    text-align: center;
+    }
+
+    header h1{
+        font-size: 45px;
+    }
+
+    form{
+        margin: 40px;
+        font-size: 20px;
+    }
+
+    main form .btn-primary{
+        font-size: 22px;
+       
+    }
+
+    footer{
+        font-size: 20px; 
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .kartya{
+        font-size: 20px;  
+    }
+
+    .kartya a{
+        font-size: 20px;  
+    } 
+
+    table{
+        margin: 40px;
+        font-size: 20px;
+        padding: 15px;
+        max-width: 96%;
+      
+
+    }
+
+    .admin{
+        margin: 20px 40px;
+
+    }
+
+   @media screen and (max-width: 1000px){
+    nav{
+        font-size: 18px;
+    }
+
+  
+
+    .kartyak{
+        font-size: 20px;     
+    }
+   }
+
+   @media (max-width: 993px){
+    nav{
+        font-size: 18px;
+    }
+
+
+   }
+   
