@@ -1,9 +1,16 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0;   
+    padding: 0;  
+  
 }
 
+.main{
+    max-width: 1400px;
+    width: 90%;
+    margin: 20px auto;
+
+}
 
 
 .kartya{
@@ -17,6 +24,7 @@ table, tr, td{
     border: 1px gainsboro solid;
     text-align: center;
     padding: 25px;
+    
 }
 
 
@@ -24,8 +32,8 @@ form{
     border: 1px solid gainsboro;
     border-radius: 8px;
     padding: 30px;
-    font-size: 15px;
     margin: 20px;
+    background-color: #f8f9fa;
 }
 
 
@@ -36,7 +44,6 @@ footer{
 
 nav{
     margin: 20px;
-    font-size: 20px;
 }
 
 header h1{
@@ -78,7 +85,6 @@ header{
 
     form{
         margin: 40px;
-        font-size: 20px;
     }
 
     main form .btn-primary{
@@ -90,11 +96,9 @@ header{
         font-size: 20px; 
         padding: 20px;
         margin: 20px;
+        background-color: #f8f9fa;
     }
 
-    .kartya{
-        font-size: 20px;  
-    }
 
     .kartya a{
         font-size: 20px;  

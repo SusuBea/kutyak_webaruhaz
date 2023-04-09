@@ -18,7 +18,7 @@ export function osszeallit(lista) {
   }
   
   export function osszeallit2(lista) {
-    let txt = '<div class="table-responsive"><table class="table table-hover "><thead class= "thead-dark"><tr><th scope="col">#</th><th scope="col">Név</th><th scope="col">Kor</th><th scope="col">Fajta</th><th scope="col">Nem</th><th scope="col">Szerkeszt</th></tr></thead>';
+    let txt = '<div class="table-responsive"><table class="table table-hover "><thead class= "thead-dark"><tr><th scope="col">#</th><th scope="col" id="szurNev">Név</th><th scope="col" id="szurKor">Kor</th><th scope="col" id="szurFajta">Fajta</th><th scope="col" id="szurNem">Nem</th><th scope="col">Szerkeszt</th></tr></thead>';
     for (let index = 0; index < lista.length; index++) {
         txt += `<tbody><tr><th scope="row">${[index+1]}</th>`;
         for (const kulcs in lista[index]) {

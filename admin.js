@@ -1,6 +1,6 @@
 import { KUTYALISTA, KUTYAKULCS} from "./adat.js";
 import  { osszeallit2 } from "./adatkezeles.js";
-// import  { rendezesBarmiSzerint} from "./rendezesSzures.js";
+import { rendezBarmiSzerint } from "./rendezesSzures.js";
 window.addEventListener("load", init);
 
 let ARTICLE;
@@ -8,8 +8,6 @@ let kartyak;
 let tablazat;
 
 function init() {
-  // rendezesBarmiSzerint(KUTYALISTA, "kor", -1)
-  //   console.log()
   
   ARTICLE = document.querySelector("article");
   let tablazat = document.querySelector("article section");
@@ -17,6 +15,11 @@ function init() {
   torlesGomb();
   const SUBMIT = document.querySelector("#rogzites");
   SUBMIT.addEventListener("click", UjKutya);
+
+  rendezBarmiSzerint(KUTYALISTA, "kor", -1)
+  let korSzur = document.querySelector("#kkor")
+  console.log(korSzur)
+  korSzur.addEventListener("click", rendezBarmiSzerint)
 
 
   
