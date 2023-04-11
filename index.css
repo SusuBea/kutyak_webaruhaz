@@ -56,6 +56,13 @@ header h1{
     flex-wrap: wrap;
     justify-content: center;
 
+
+}
+
+.card-body{
+    height: 300px;
+    width: 250px;
+
 }
 
 
@@ -113,10 +120,14 @@ header{
 
     }
 
-    .admin{
-        margin: 20px 40px;
+    .main_admin{
+        margin: 30px;
+        margin-left: 200px;
+        margin-right: 200px;
 
     }
+
+
 
 
    @media screen and (max-width: 1000px){
@@ -126,6 +137,20 @@ header{
     .kartyak{
         font-size: 20px;     
     }
+
+    .main_admin{
+        margin: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+
+    }
+
+    .card-body{
+        height: 290px;
+        width: 230px;
+    
+    }
+
    }
 
 
@@ -136,11 +161,23 @@ header{
         font-size: 15px;
     }
 
+    .main_admin{
+        margin: 20px;
+        margin-left: 80px;
+        margin-right: 80px;
+
+    }
+
+    .card-body{
+        height: 280px;
+        width: 230px;
+        font-size: 19px;
+        padding: 5px;
+    
+    }
 
    }
    
-
-
 
 
 
@@ -160,8 +197,35 @@ header{
         border: 1px solid red;
     }
 
+    .main_admin{
+        margin: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+        display: grid;
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "n"
+        "f"
+        "a"
+       }
+
+       nav {grid-area: "n"; }
+       form {grid-area: "f"; }
+       article {grid-area: "a"; }
+
+       
+    .card-body{
+        height: 260px;
+        width: 220px;
+        font-size: 15px;
+    
+    }
 
    }
+
+
+   
    
 
 
@@ -174,10 +238,19 @@ header{
     }
 
 
+    .main_admin{
+        margin: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+        
+
    }
 
 
-   @media screen and (max-width: 470px){
+   @media screen and (max-width: 370px){
 
 
     main article section div table{
