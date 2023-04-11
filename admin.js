@@ -1,40 +1,65 @@
-import { KUTYALISTA, KUTYAKULCS} from "./adat.js";
-import  { osszeallit2 } from "./adatkezeles.js";
+import { KUTYALISTA, KUTYAKULCS } from "./adat.js";
+import { tablazat_osszeallit } from "./adatkezeles.js";
 import { rendezBarmiSzerint } from "./rendezesSzures.js";
 window.addEventListener("load", init);
 
-let ARTICLE;
-let kartyak;
-let tablazat;
+let article;
+
+let rendezMezo = "";
+let rendezIrany = 1;
 
 function init() {
-  
-  ARTICLE = document.querySelector("article");
-  let tablazat = document.querySelector("article section");
-  tablazat.innerHTML = osszeallit2(KUTYALISTA)
+
+  article = document.querySelector("article");
+  let tablazat = document.querySelector("article section table tbody");
+  tablazat.innerHTML = tablazat_osszeallit(KUTYALISTA)
   torlesGomb();
-  const SUBMIT = document.querySelector("#rogzites");
-  SUBMIT.addEventListener("click", UjKutya);
+  let submit = document.querySelector("#rogzites");
+  submit.addEventListener("click", UjKutya);
 
   rendezBarmiSzerint(KUTYALISTA, "kor", -1)
   let korSzur = document.querySelector("#kkor")
   console.log(korSzur)
   korSzur.addEventListener("click", rendezBarmiSzerint)
 
+  let thElemek = document.querySelectorAll("th[data-sort-field]");
+  for (const th of thElemek) {
+    th.addEventListener("click", thClick);
+  }
 
-  
+}
+
+function thClick(event) {
+  let ujRendezMezo = event.target.dataset.sortField;
+  console.log("thClick *", ujRendezMezo);
+  if (ujRendezMezo !== undefined) {
+    if (rendezMezo == ujRendezMezo) {
+      rendezIrany *= -1;
+      console.log("thClick c1");
+    } else {
+      rendezMezo = ujRendezMezo;
+      rendezIrany = 1;
+      console.log("thClick c2");
+    }
+    console.log("thClick", rendezMezo, rendezIrany);
+    rendezBarmiSzerint(KUTYALISTA, rendezMezo, rendezIrany);
+
+    let tablazat = document.querySelector("article section table tbody");
+    tablazat.innerHTML = tablazat_osszeallit(KUTYALISTA)
+  }
+  torlesGomb();
 }
 
 function torlesGomb() {
-  const TR = document.querySelectorAll("tr");
+  let tr = document.querySelectorAll("tr");
 
   for (let index = 0; index < KUTYALISTA.length; index++) {
-    const TD = document.createElement("td");
-    const TORLES = document.createElement("button");
-    TORLES.innerText = "Törlés";
-    TR[index+1].appendChild(TD);
-    TD.appendChild(TORLES);
-    TORLES.addEventListener("click", function () {
+    let td = document.createElement("td");
+    let torles = document.createElement("button");
+    torles.innerText = "Törlés";
+    tr[index + 1].appendChild(td);
+    td.appendChild(torles);
+    torles.addEventListener("click", function () {
       torlesFunkcio(index);
     });
   }
@@ -42,32 +67,24 @@ function torlesGomb() {
 
 function torlesFunkcio(index) {
   KUTYALISTA.splice(index, 1);
-  let tablazat = document.querySelector("article section");
-  tablazat.innerHTML = osszeallit2(KUTYALISTA)
+  let tbody = document.querySelector("article section table tbody");
+  tbody.innerHTML = tablazat_osszeallit(KUTYALISTA)
   console.log("test")
   torlesGomb();
 }
 
-
 function UjKutya() {
+  const kutya = {};
 
-  const kutya= {};
+  const NevInputElem = document.querySelector("#knev")
+ 
+  kutya.nev = NevInputElem.value;
 
-  /**szedjük össze az űrlap adatait,
-   * és tegyük bele egy objektumba 
-   * és fűzzük, hozzá a listánkhoz
-    */
+  const KorInputElem = document.querySelector("#kkor")
+  kutya.kor = KorInputElem.value;
 
-  //megfogom a beviteli mezőt
-  const NevInputElem = document.querySelector("#knev") 
-  //beleteszem a már fentebb lértehozott listába a beírt adatokat
-  kutya.nev=NevInputElem.value;
-
-  const KorInputElem = document.querySelector("#kkor") 
-  kutya.kor=KorInputElem.value;
-
-  const FajtaInputElem = document.querySelector("#kfajta") 
-  kutya.fajta=FajtaInputElem.value;
+  const FajtaInputElem = document.querySelector("#kfajta")
+  kutya.fajta = FajtaInputElem.value;
 
   const NemInputElem = document.querySelector("#szuka");
   if (NemInputElem.checked) {
@@ -76,13 +93,9 @@ function UjKutya() {
     kutya.nem = "kan";
   }
 
-
-    KUTYALISTA.push(kutya);
-    let tablazat = document.querySelector("article section");
-    console.log(tablazat)
-    tablazat.innerHTML = osszeallit2(KUTYALISTA);
-    torlesGomb();
+  KUTYALISTA.push(kutya);
+  let tablazat = document.querySelector("article section table tbody");
+  console.log(tablazat)
+  tablazat.innerHTML = tablazat_osszeallit(KUTYALISTA);
+  torlesGomb();
 }
-
-
-

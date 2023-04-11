@@ -118,21 +118,26 @@ header{
 
     }
 
+
    @media screen and (max-width: 1000px){
     nav{
         font-size: 18px;
     }
-
-  
-
     .kartyak{
         font-size: 20px;     
     }
    }
 
-   @media (max-width: 993px){
+
+
+   @media screen and (max-width: 576px){
     nav{
         font-size: 18px;
+    }
+
+    nav div form .d-flex{
+        margin: 20px;
+        display: inline-block!important;
     }
 
 
