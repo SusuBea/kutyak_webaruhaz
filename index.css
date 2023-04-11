@@ -84,7 +84,7 @@ header{
     }
 
     form{
-        margin: 40px;
+        margin: 30px;
     }
 
     main form .btn-primary{
@@ -105,7 +105,7 @@ header{
     } 
 
     table{
-        margin: 40px;
+        margin: 30px;
         font-size: 20px;
         padding: 15px;
         max-width: 96%;
@@ -129,6 +129,20 @@ header{
    }
 
 
+   @media screen and (max-width: 830px){
+
+    main article section div table{
+        max-width: 90%;
+        font-size: 15px;
+    }
+
+
+   }
+   
+
+
+
+
 
    @media screen and (max-width: 576px){
     nav{
@@ -140,6 +154,36 @@ header{
         display: inline-block!important;
     }
 
+    main article section div table{
+        max-width: 30%;
+        font-size: 14px;
+        border: 1px solid red;
+    }
+
 
    }
    
+
+
+   @media screen and (max-width: 550px){
+
+
+    main article section div table{
+        max-width: 20%;
+        font-size: 13px;
+    }
+
+
+   }
+
+
+   @media screen and (max-width: 470px){
+
+
+    main article section div table{
+        max-width: 10%;
+        font-size: 13px;
+    }
+
+
+   }
