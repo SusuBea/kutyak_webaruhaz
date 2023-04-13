@@ -39,11 +39,15 @@
         </ul>
       </div>
     </div>
+    <button class="btn btn-primary kosar_gomb" type="submit" id="kosar">Kosár</button>
   </nav>
   <!--NAVBAR-->
 
   <!--MAIN-->
+  <div id="cart_parent2"></div>
+
   <main class="main_admin">
+    
 
     <!--SEARCH-->
     <nav class="navbar search">
@@ -53,14 +57,14 @@
           <input class="form-control me-2" type="search" placeholder="pl: >12, =12, <12" aria-label="Search">
           <input class="form-control me-2" type="search" placeholder="fajta" aria-label="Search">
           <input class="form-control me-2" type="search" placeholder="nem" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit" id="keres">Keres</button>
+          <button class="btn btn-primary" type="submit" id="keres">Keres</button>
         </form>
       </div>
     </nav>
     <!--SEARCH-->
 
     <!--FORM-->
-    <form action="javascript:void(0)" class="">
+    <form action="javascript:void(0)" class="remove">
       <div class="mb-lg-4">
         <label for="knev" class="form-label">Név</label>
         <input type="text" class="form-control" id="knev" aria-describedby="knev" placeholder="név">
@@ -98,6 +102,7 @@
                 <th data-sort-field="kor" id="szurKor">Kor &#8645;</th>
                 <th data-sort-field="fajta" id="szurFajta">Fajta &#8645;</th>
                 <th data-sort-field="nem" id="szurNem">Nem &#8645;</th>
+                <th>Törlés</th>
                 <th>Szerkeszt</th>
               </tr>
             </thead>

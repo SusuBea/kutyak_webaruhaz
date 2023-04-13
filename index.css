@@ -27,6 +27,75 @@ table, tr, td{
     
 }
 
+table button{
+    border-radius: 4px;
+    padding: 4px;
+}
+
+#keres{
+    margin: 10px;
+}
+
+#kosar{
+    margin-left: 8px;
+    margin-bottom: 4px;
+    margin-right: 10px;
+}
+
+#cart{
+    margin: 20px;
+    padding: 5px;
+    background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
+    height: 30vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: 20px;
+    margin-left: auto;
+
+}
+
+.Cart-Container{
+    width: 40%;
+    height: 35%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 25px 40px #1687d933;
+   }
+
+
+   .Header{
+    margin: 5px;
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+   }
+   .Heading{
+    font-size: 20px;
+    font-family: ‘Open Sans’;
+    font-weight: 500;
+    color: #afb0b2;
+   }
+   .Action{
+    font-size: 14px;
+    font-family: ‘Open Sans’;
+    font-weight: 600;
+    color: #E44C4C;
+    cursor: pointer;
+    border-bottom: 1px solid #E44C4C;
+   }
+
+   #cart_parent{
+    display: flex;
+    justify-content: right;
+   }
+
+   #cart_parent2{
+    display: flex;
+    justify-content: right;
+   }
 
 form{
     border: 1px solid gainsboro;
@@ -113,7 +182,7 @@ header{
 
     table{
         margin: 30px;
-        font-size: 19px;
+        font-size: 18px;
         padding: 15px;
         max-width: 96%;
       
@@ -202,7 +271,7 @@ header{
         margin-left: 40px;
         margin-right: 40px;
         display: grid;
-        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-rows: auto 1fr 1fr;
         grid-template-columns: auto;
         grid-template-areas: 
         "n"
