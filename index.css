@@ -69,8 +69,8 @@ table button{
     width: 90%;
     height: 15%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: flex-end;
+    align-items: center;
    }
    .Heading{
     font-size: 20px;
