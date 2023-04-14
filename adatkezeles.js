@@ -33,7 +33,7 @@ export function osszeallit(lista) {
 
 export function kosar_osszeallit(){
   let txt ="" 
-   txt += '<div class=”Cart-Container”><aside id="cart" class="kartya card w-40""><div class="card-body"><div class=”Header”><h3 class=”Heading”>Tartalom:</h3><h6>Jelenleg üres a kosara.</h6><br></div></aside></div>'
+   txt += '<div class="card-body kartya card w-40 Cart-Container" id="cart"><button id="x" class="btn btn-primary btn-sm" type="button">&#x2613;</button><h3 class=”Heading” id="h3">Tartalom:</h3><h6 id="h6">Jelenleg üres a kosara.</h6><br></div>'
   return txt
 }
 

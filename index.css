@@ -42,60 +42,11 @@ table button{
     margin-right: 10px;
 }
 
-#cart{
-    margin: 20px;
-    padding: 5px;
-    background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
-    height: 30vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    margin-right: 20px;
-    margin-left: auto;
-
-}
-
-.Cart-Container{
-    width: 40%;
-    height: 35%;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0px 25px 40px #1687d933;
-   }
 
 
-   .Header{
-    margin: 5px;
-    width: 90%;
-    height: 15%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-   }
-   .Heading{
-    font-size: 20px;
-    font-family: ‘Open Sans’;
-    font-weight: 500;
-    color: #afb0b2;
-   }
-   .Action{
-    font-size: 14px;
-    font-family: ‘Open Sans’;
-    font-weight: 600;
-    color: #E44C4C;
-    cursor: pointer;
-    border-bottom: 1px solid #E44C4C;
-   }
 
-   #cart_parent{
-    display: flex;
-    justify-content: right;
-   }
 
-   #cart_parent2{
-    display: flex;
-    justify-content: right;
-   }
+ 
 
 form{
     border: 1px solid gainsboro;
@@ -128,11 +79,27 @@ header h1{
 
 }
 
-.card-body{
-    height: 300px;
-    width: 250px;
+#cart_parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#cart{
+    align-self: flex-end;
+    background-color: aliceblue;
+    height: 240px;
 
 }
+
+#x{
+    width: fit-content;
+    align-self: flex-end;
+}
+
+#h3{align-self: flex-start;}
+
+#h6{align-self: flex-start;}
 
 
 div .header-image {
