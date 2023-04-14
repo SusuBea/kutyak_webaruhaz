@@ -36,10 +36,12 @@ table button{
     margin: 10px;
 }
 
-#kosar{
+button .kosar{
     margin-left: 8px;
     margin-bottom: 4px;
     margin-right: 10px;
+    padding: 10px;
+    font-size: 40px;
 }
 
 
