@@ -1,20 +1,22 @@
-import { betolt } from "./main2.js";
+import { adatBeolvas } from "./aszinkron.js";
 import  { osszeallit } from "./adatkezeles.js";
 import  { kosar_osszeallit } from "./adatkezeles.js";
 
-window.addEventListener("load", init);
 
 
+let KUTYALISTA = []
 let ARTICLE;
 let kartyak;
 let kosar;
 
 $(function (){
 
-  betolt();
+  let vegpont = "adatok.json"
+  adatBeolvas(vegpont, init)
 })
 
-function init() {
+function init(LISTA) {
+  KUTYALISTA = LISTA
   ARTICLE = document.querySelector("article");
   let kartyak = document.querySelector("section.kartyak");
   kartyak.innerHTML = osszeallit(KUTYALISTA)

@@ -36,6 +36,7 @@ table button{
     margin: 10px;
 }
 
+
 button .kosar{
     margin-left: 8px;
     margin-bottom: 4px;
@@ -85,6 +86,8 @@ header h1{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: absolute;
+    z-index: 1;
 }
 
 #cart{

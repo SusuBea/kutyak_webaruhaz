@@ -1,16 +1,23 @@
+import { adatBeolvas } from "./aszinkron.js";
 import { tablazat_osszeallit } from "./adatkezeles.js";
-import { rendezBarmiSzerint } from "./rendezesSzures.js";
 import  { kosar_osszeallit } from "./adatkezeles.js";
-window.addEventListener("load", init);
+import { rendezBarmiSzerint } from "./rendezesSzures.js";
+
 
 let article;
-
+let KUTYALISTA = []
 let rendezMezo = "";
 let rendezIrany = 1;
 let kosar;
 
-function init() {
+$(function (){
+  let vegpont = "adatok.json"
+  adatBeolvas(vegpont, init)
+})
 
+
+function init(LISTA) {
+  KUTYALISTA = LISTA
   article = document.querySelector("article");
   let tablazat = document.querySelector("article section table tbody");
   tablazat.innerHTML = tablazat_osszeallit(KUTYALISTA)
