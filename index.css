@@ -11,6 +11,10 @@
     margin: 20px auto;
 
 }
+.main_div{
+    display: flex;
+    flex-direction: column;
+}
 
 
 .kartya{
@@ -88,13 +92,14 @@ header h1{
     justify-content: flex-start;
     position: absolute;
     z-index: 1;
+    align-self: flex-end;
 }
 
 #cart{
     align-self: flex-end;
     background-color: aliceblue;
-    height: 270px;
-    width: 240px;
+    height: 290px;
+    width: 250px;
 
 }
 

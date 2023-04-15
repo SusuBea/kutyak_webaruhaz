@@ -56,77 +56,79 @@
   <!--NAVBAR-->
 
   <!--MAIN-->
-  <div id="cart_parent"></div>
+  <div class="main_div">
+    <div id="cart_parent"></div>
 
-  <main class="main_admin">
-    
+    <main class="main_admin">
+      
 
-    <!--SEARCH-->
-    <nav class="navbar search">
-      <div class="container">
-        <form class="d-sm-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="név" aria-label="Search">
-          <input class="form-control me-2" type="search" placeholder="pl: >12, =12, <12" aria-label="Search">
-          <input class="form-control me-2" type="search" placeholder="fajta" aria-label="Search">
-          <input class="form-control me-2" type="search" placeholder="nem" aria-label="Search">
-          <button class="btn btn-primary" type="submit" id="keres">Keres</button>
-        </form>
-      </div>
-    </nav>
-    <!--SEARCH-->
-
-    <!--FORM-->
-    <form action="javascript:void(0)" class="remove">
-      <div class="mb-lg-4">
-        <label for="knev" class="form-label">Név</label>
-        <input type="text" class="form-control" id="knev" aria-describedby="knev" placeholder="név">
-      </div>
-      <div class="mb-lg-4">
-        <label for="kkor" class="form-label">Kor</label>
-        <input type="number" class="form-control" id="kkor" placeholder="kor">
-      </div>
-      <div class="mb-lg-4">
-        <label for="kfajta" class="form-label">Fajta</label>
-        <input type="text" class="form-control" id="kfajta" placeholder="fajta">
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="knem" id="szuka" value="szuka" checked>
-        <label class="form-check-label" for="szuka"> Szuka </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="knem" id="kan" value="kan">
-        <label class="form-check-label" for="kan"> Kan </label>
-      </div>
-      <br><br />
-      <button type="submit" class="btn btn-primary" id="rogzites">Küld</button>
-    </form>
-    <!--FORM-->
-
-    <!--TABLE-->
-    <article class="admin">
-      <section class="tablazat">
-        <div class="table-responsive">
-          <table class="table table-hover">
-            <thead class="thead-dark">
-              <tr>
-                <th>#</th>
-                <th data-sort-field="nev" id="szurNev">Név &#8645;</th>
-                <th data-sort-field="kor" id="szurKor">Kor &#8645;</th>
-                <th data-sort-field="fajta" id="szurFajta">Fajta &#8645;</th>
-                <th data-sort-field="nem" id="szurNem">Nem &#8645;</th>
-                <th>Törlés</th>
-                <th>Szerkeszt</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
+      <!--SEARCH-->
+      <nav class="navbar search">
+        <div class="container">
+          <form class="d-sm-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="név" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="pl: >12, =12, <12" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="fajta" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="nem" aria-label="Search">
+            <button class="btn btn-primary" type="submit" id="keres">Keres</button>
+          </form>
         </div>
-      </section>
-    </article>
-    <!--TABLE-->
+      </nav>
+      <!--SEARCH-->
 
-  </main>
+      <!--FORM-->
+      <form action="javascript:void(0)" class="remove">
+        <div class="mb-lg-4">
+          <label for="knev" class="form-label">Név</label>
+          <input type="text" class="form-control" id="knev" aria-describedby="knev" placeholder="név">
+        </div>
+        <div class="mb-lg-4">
+          <label for="kkor" class="form-label">Kor</label>
+          <input type="number" class="form-control" id="kkor" placeholder="kor">
+        </div>
+        <div class="mb-lg-4">
+          <label for="kfajta" class="form-label">Fajta</label>
+          <input type="text" class="form-control" id="kfajta" placeholder="fajta">
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="knem" id="szuka" value="szuka" checked>
+          <label class="form-check-label" for="szuka"> Szuka </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="knem" id="kan" value="kan">
+          <label class="form-check-label" for="kan"> Kan </label>
+        </div>
+        <br><br />
+        <button type="submit" class="btn btn-primary" id="rogzites">Küld</button>
+      </form>
+      <!--FORM-->
+
+      <!--TABLE-->
+      <article class="admin">
+        <section class="tablazat">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#</th>
+                  <th data-sort-field="nev" id="szurNev">Név &#8645;</th>
+                  <th data-sort-field="kor" id="szurKor">Kor &#8645;</th>
+                  <th data-sort-field="fajta" id="szurFajta">Fajta &#8645;</th>
+                  <th data-sort-field="nem" id="szurNem">Nem &#8645;</th>
+                  <th>Törlés</th>
+                  <th>Szerkeszt</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </article>
+      <!--TABLE-->
+
+    </main>
+  </div>
   <!--MAIN-->
 
   <footer>Suhajda Bea</footer>
