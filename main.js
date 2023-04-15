@@ -1,11 +1,18 @@
-import { KUTYALISTA} from "./adat.js";
+import { betolt } from "./main2.js";
 import  { osszeallit } from "./adatkezeles.js";
 import  { kosar_osszeallit } from "./adatkezeles.js";
+
 window.addEventListener("load", init);
+
 
 let ARTICLE;
 let kartyak;
 let kosar;
+
+$(function (){
+
+  betolt();
+})
 
 function init() {
   ARTICLE = document.querySelector("article");

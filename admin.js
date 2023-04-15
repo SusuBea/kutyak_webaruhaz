@@ -1,4 +1,3 @@
-import { KUTYALISTA, KUTYAKULCS } from "./adat.js";
 import { tablazat_osszeallit } from "./adatkezeles.js";
 import { rendezBarmiSzerint } from "./rendezesSzures.js";
 import  { kosar_osszeallit } from "./adatkezeles.js";
