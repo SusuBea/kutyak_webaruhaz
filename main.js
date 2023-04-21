@@ -27,10 +27,8 @@ function init(LISTA) {
 }
 
 function kosar_mutat(){
-  let kosar = document.querySelector("#cart_parent")
-  console.log(kosar)
-  kosar.innerHTML += kosar_osszeallit();
-  kosar_bezar();
+  $(".kosar").on("click", $(".cart_parent").html(kosar_osszeallit()))
+    kosar_bezar();
 }
 
 

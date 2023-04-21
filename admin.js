@@ -18,26 +18,21 @@ $(function (){
 
 function init(LISTA) {
   KUTYALISTA = LISTA
-  article = document.querySelector("article");
-  let tablazat = document.querySelector("article section table tbody");
-  tablazat.innerHTML = tablazat_osszeallit(KUTYALISTA)
+
+  $("article section table tbody").html(tablazat_osszeallit(KUTYALISTA))
   torlesGomb();
-  let submit = document.querySelector("#rogzites");
-  submit.addEventListener("click", UjKutya);
+  $("#rogzites").on("click", UjKutya);
 
   rendezBarmiSzerint(KUTYALISTA, "kor", -1)
-  let korSzur = document.querySelector("#kkor")
-  console.log(korSzur)
-  korSzur.addEventListener("click", rendezBarmiSzerint)
+  $("#kkor").on("click", rendezBarmiSzerint)
+
 
   let thElemek = document.querySelectorAll("th[data-sort-field]");
   for (const th of thElemek) {
     th.addEventListener("click", thClick);
   }
 
-  let kosar = document.querySelector(".kosar_gomb")
-  console.log(kosar)
-  kosar.addEventListener("click", kosar_mutat)
+  $(".kosar_gomb").on("click", kosar_mutat)
   kosar_bezar();
 
 }
@@ -122,18 +117,16 @@ function UjKutya() {
 
 
 function kosar_mutat(){
-  let kosar = document.querySelector("#cart_parent")
-  console.log(kosar)
-  kosar.innerHTML += kosar_osszeallit();
-  kosar_bezar();
+  $(".kosar").on("click", $(".cart_parent").html(kosar_osszeallit()))
+    kosar_bezar();
 }
 
 
 function kosar_bezar(){
-  const x = document.querySelector("#x")
-  console.log(x)
-  x.addEventListener("click", torles)
+  $("#x").on("click", torles)
 }
+
+
 
 function torles(event){
   const DIV = event.target.parentNode;

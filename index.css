@@ -86,7 +86,7 @@ header h1{
 
 }
 
-#cart_parent{
+.cart_parent{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
